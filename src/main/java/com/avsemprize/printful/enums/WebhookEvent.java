@@ -21,7 +21,22 @@ public enum WebhookEvent {
      * </p>
      */
     PACKAGE_SHIPPED,
+    /**
+     * Is called when a shipment is processed as returned to the fulfillment facility. To learn more about the reasons why a shipment might be returned, take a look at Printful's Return Policy
+     */
+    PACKAGE_RETURNED,
 
+
+    ORDER_PUT_HOLD,
+    ORDER_PUT_HOLD_APPROVAL,
+    /**
+     * Is called when the order is first created.
+     */
+    ORDER_CREATED,
+    /**
+     * Is called when an existing order gets updated for any reason - including things that are covered with other webhooks like order_canceled.
+     */
+    ORDER_UPDATED,
     /**
      * Calls POST http://example.com/your-webhook-url
      * <p>
@@ -45,6 +60,18 @@ public enum WebhookEvent {
      * @see in.clayfish.printful.clients.EComPlatformSyncApiClient
      */
     PRODUCT_SYNCED,
+    /**
+     * Is called when a new product or variant is created or updated in any way.
+     *
+     * See Ecommerce Platform Sync API
+     */
+    PRODUCT_UPDATED,
+    /**
+     * Is called when a new product or variant is deleted.
+     *
+     * See Ecommerce Platform Sync API
+     */
+    PRODUCT_DELETED,
 
     /**
      * Is called when stock is updated for some of product's variants.
