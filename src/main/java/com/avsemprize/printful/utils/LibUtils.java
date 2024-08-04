@@ -220,6 +220,6 @@ public abstract class LibUtils {
      * @return Base64 encoded string
      */
     public static String encodeToBase64(String str) {
-        return new String(Base64.encodeBase64(str.getBytes()));
+        return str;//new String(Base64.encodeBase64(str.getBytes()));
     }
 }

@@ -19,6 +19,7 @@ public class Item extends Entity {
      * Line item ID from the external system
      */
     private String externalId;
+    private Long sync_variant_id;
 
     /**
      * Variant ID of the item ordered. See Products API
@@ -64,6 +65,14 @@ public class Item extends Entity {
      * Product identifier (SKU) from the external system
      */
     private String sku;
+
+    public Long getSync_variant_id() {
+        return sync_variant_id;
+    }
+
+    public void setSync_variant_id(Long sync_variant_id) {
+        this.sync_variant_id = sync_variant_id;
+    }
 
     public String getExternalId() {
         return externalId;
