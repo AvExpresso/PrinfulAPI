@@ -50,6 +50,36 @@ public class SyncVariant extends Entity {
      */
     private List<ItemOption> options;
 
+    private String color;
+
+    private String size;
+
+    private Double retailPrice;
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public Double getRetailPrice() {
+        return retailPrice;
+    }
+
+    public void setRetailPrice(Double retailPrice) {
+        this.retailPrice = retailPrice;
+    }
+
     public String getExternalId() {
         return externalId;
     }

@@ -80,6 +80,11 @@ public enum WebhookEvent {
      * Variant ids that are not present should be considered as active and in stock.
      */
     STOCK_UPDATED;
+    // get enum from string value
+
+    public static WebhookEvent fromString(String value) {
+        return WebhookEvent.valueOf(value.toUpperCase());
+    }
 
     @Override
     public String toString() {
